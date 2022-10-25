@@ -6,7 +6,7 @@ const cardSchema = mongoose.Schema({
     imageUrl:String,
     bio:String,
     dob:Date,
-    onlineStatus:int
+    onlineStatus:Number
 
 
 })
