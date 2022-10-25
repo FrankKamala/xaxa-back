@@ -6,11 +6,17 @@ import dateCards from './dbSchema/dateCards.js';
 const app = express()
 const port = process.env.PORT || 8001
 //connection 
-const db_con= 'mongodb+srv://Kamala:<404DataLab>@xaxadb-cluster.goiw5re.mongodb.net/?retryWrites=true&w=majority'
+const db_con= 'mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@xaxadb-cluster.goiw5re.mongodb.net/?retryWrites=true&w=majority'
 //Middleware
 
 //DB Config
 mongoose.connect(db_con)
+    .then( () => {
+        console.log('Connected to the database ')
+    })
+    .catch( (err) => {
+        console.error(`Error connecting to the database. n${err}`);
+    })
 
 
 
