@@ -1,12 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dateCards from './dbSchema/dateCards.js';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 
 const app = express()
 const port = process.env.PORT || 8001
 //connection 
-const db_con= 'mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@xaxadb-cluster.goiw5re.mongodb.net/?retryWrites=true&w=majority'
+const db_con = process.env.MONGO_URI
 //Middleware
 
 //DB Config
