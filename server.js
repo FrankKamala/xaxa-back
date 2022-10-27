@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dateCards from './dbSchema/dateCards.js';
+import Cors from 'cors'
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -11,6 +12,8 @@ const port = process.env.PORT || 8001
 //connection 
 const db_con = process.env.MONGO_URI
 //Middleware
+app.use(express.json())
+app.use(Cors())
 
 //DB Config
 mongoose.connect(db_con)
