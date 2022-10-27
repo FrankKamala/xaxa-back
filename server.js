@@ -30,8 +30,8 @@ mongoose.connect(db_con)
 app.get("/", (req, res) => res.status(200).send("Get working"))
 //app.get("api/res/dummy",(req, res)=>res.json("{username:'jonte',password:'sinayet'}"))
 app.post("/api/store/card",(req, res)=>{
-    const cardData = req.body()
-    Cards.create(cardData, (err, data) => {
+    const cardData = req.body
+    dateCards.create(cardData, (err, data) => {
                 if(err) {
                         res.status(500).send(err)
                 } else {
