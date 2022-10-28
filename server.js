@@ -51,3 +51,4 @@ app.get('/api/cards', (req, res) => {
 
 //Listener
 app.listen(port, () => console.log(`Listening on localhost: ${port}`))
+module.exports = app;
