@@ -27,7 +27,7 @@ mongoose.connect(db_con)
 
 
 //API Endpoints
-app.get("/", (req, res) => res.status(200).send("Get working"))
+app.get("/", (req, res) => res.status(200).send("End point ni Moja get /api/cards "))
 //app.get("api/res/dummy",(req, res)=>res.json("{username:'jonte',password:'sinayet'}"))
 app.post("/api/store/card",(req, res)=>{
     const cardData = req.body
